@@ -1,0 +1,31 @@
+baseURL = 'https://www.networkcommons.org/'
+languageCode = 'en-us'
+title = 'network commons'
+theme = ["hugo-embed-pdf-shortcode", "ananke"]
+enableInlineShortcodes = true
+[params]
+  subtitle = 'to name is to own'
+  toc = true
+  site_logo = "images/nc-network-commons-plain-export.png"
+  recent_posts_number = 4
+  custom_css = ["custom.css"]
+  [[params.ananke_socials]]
+    name = "github"
+    url = "https://github.com/networkcommons/networkcommons.org"
+  [[params.ananke_socials]]
+    name = "rss"
+    url = "https://www.networkcommons.org/index.xml"
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
+  [markup.goldmark.renderer]
+    unsafe = true
+[outputs]
+  home = ["HTML", "RSS"]
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
